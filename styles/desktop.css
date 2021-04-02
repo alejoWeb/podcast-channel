@@ -1,3 +1,35 @@
 body {
   min-width: 144rem;
 }
+
+
+h1 {
+  font-size: 6.4rem;
+  line-height: 8.4rem;
+
+}
+
+.wrapper {
+  width: 124rem;
+}
+
+/* ---HEADER SECTION--- */
+.header {
+  height: 8rem;
+}
+.header .wrapper .logo img {
+  width: 3.6rem;
+}
+
+/* .menu-container__burger-icon */
+.menu-container__label, .me {
+  display: none;
+}
+.menu {
+  /* display: block; */
+  transform: translate(0);
+  position: static;
+}
+.menu ul {
+  display: flex;
+}

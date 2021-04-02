@@ -84,7 +84,7 @@ h1, h2 {
   /* background-color: hotpink; */
 }
 
-/* Mostrar menu */
+/* ---SHOW MENU--- */
 #show {
   display: none;
 }
@@ -114,7 +114,6 @@ ul li {
   /* padding: 10px 0 15px 0px; */
   margin: 1.6rem 0 2.4rem 1.6rem;
   font-size: 1.6rem;
-  /* font-family: "Roboto", sans-serif; */
 }
 li a {
   color: var(--white);
