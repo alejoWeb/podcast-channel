@@ -1,0 +1,141 @@
+:root {
+  --plex-sans: 'IBM Plex Sans', sans-serif;
+  --plex-mono: 'IBM Plex Mono', sans-serif;
+  --black: #060A24;
+  --btn-color: #00F3BB;
+  --active-link: rgba(6,10,36,0.56);
+  --white: #FFF;
+}
+
+/* ----------HEADER SECTION---------- */
+
+.header {
+  height: 6rem;
+}
+
+.nav {
+  padding: 0 3rem;
+}
+
+.nav__logo {
+  width: 3.63rem;
+}
+
+.nav__menu-icon {
+  display: none;
+}
+
+.nav__menu-container {
+  position: static;
+  flex-direction: row;
+  transform: none;
+  width: auto;
+}
+
+.nav__menu-container .nav__menu-item {
+  background-color: transparent;
+  padding: 0;
+  margin-left: 4.8rem;
+}
+
+.nav__menu-item > a {
+  color: var(--black);
+}
+
+/* ----------HERO SECTION---------- */
+
+.hero {
+  padding: 0 1.4rem;
+}
+
+.hero__title {
+  margin-top: 12rem;
+  white-space: initial;
+}
+
+.hero__title--dot {
+  color: #0000EC;
+}
+
+.hero__text--mobile {
+  display: none;
+}
+
+.hero__text--desktop {
+  display: initial;
+  width: 55rem;
+}
+
+/* ----------PODCASTS SECTION---------- */
+
+.podcasts {
+  clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
+}
+
+.podcasts__title {
+  margin: 13rem 0 0 13.9%;
+}
+
+.podcasts__container {
+  gap: 5rem;
+}
+
+.podcasts__episode {
+  width: 40.6%;
+}
+
+/* ----------US SECTION---------- */
+
+.us {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.us__text-container {
+  width: 44rem;
+}
+
+.us__title {
+  white-space: initial;
+}
+
+/* ----------GUESTS SECTION---------- */
+
+.guests__title {
+  margin: 0 0 1.4rem 3rem;
+}
+
+.guests__img {
+  max-width: calc(100% / 3);
+}
+
+/* ----------TOPICS SECTION---------- */
+
+.topics__title {
+  margin: 4.8rem 0 0 3rem;
+}
+
+/* ----------NEWS SECTION---------- */
+
+.news {
+  clip-path: polygon(0 35%, 100% 0, 100% 100%, 0 100%);
+}
+
+.news__title {
+  margin-top: 15rem;
+}
+
+/* ----------FOOTER SECTION---------- */
+
+.footer {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3.6rem 3rem 3.1rem;
+}
+
+.footer__text,
+.footer__icons-container {
+  margin: 0;
+}

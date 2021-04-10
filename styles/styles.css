@@ -3,8 +3,11 @@
   --plex-mono: 'IBM Plex Mono', sans-serif;
   --black: #060A24;
   --btn-color: #00F3BB;
+  --active-link: rgba(6,10,36,0.56);
   --white: #FFF;
 }
+
+/* ----------GLOBAL PROPERTIES---------- */
 
 html {
   font-size: 62.5%;
@@ -15,6 +18,7 @@ html {
   margin: 0;
   padding: 0;
   font-family: var(--plex-sans);
+  scroll-behavior: smooth;
 }
 
 body {
@@ -22,6 +26,8 @@ body {
   min-width: 32rem;
   height: 100vh;
   color: var(--black);
+  display: flex;
+  flex-direction: column;
 }
 
 p, a {
@@ -34,8 +40,7 @@ h1, h2 {
   font-weight: 400;
 }
 
-
-/* ---HEADER SECTION--- */
+/* ----------HEADER SECTION---------- */
 
 .header {
   width: 100%;
@@ -43,6 +48,9 @@ h1, h2 {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  background-color:var(--white);
+  z-index: 10;
 }
 
 .nav {
@@ -53,7 +61,7 @@ h1, h2 {
   align-items: center;
 }
 
-.nav .nav__logo {
+.nav__logo {
   width: 2.4rem;
 }
 
@@ -83,20 +91,22 @@ h1, h2 {
   left: 0;
   width: 100%;
   height: auto;
-  padding: 1.6rem 0 0 1.6rem;
-  background-color: #0000EC;
   display: flex;
   flex-direction: column;
   transform: translateX(100%);
-  transition: all .5s ease;
+  transition: all .3s ease;
 }
 
 .nav__menu-container .nav__menu-item {
   list-style: none;
-  margin-bottom: 2.4rem;
+  padding-top: 1.6rem;
+  padding-left: 1.6rem;
+  padding-bottom: 2.4rem;
   font-size: 1.6rem;
   line-height: 2.8rem;
   letter-spacing: 0;
+  background-color: #0000EC;
+  position: relative;
 }
 
 .nav__menu-item > a {
@@ -104,7 +114,17 @@ h1, h2 {
   text-decoration: none;
 }
 
-/* ---MENU ICON ANIMATION--- */
+.nav__menu-item > a:hover {
+  text-decoration: line-through;
+  color: var(--btn-color);
+}
+
+.nav__menu-item > a:active {
+  text-decoration: line-through;
+  color: var(--active-link);
+}
+
+/* ----------MENU ICON ANIMATION---------- */
 
 .nav__checkbox:checked + .nav__menu-icon .nav__menu-icon--line.top {
   transform: translateY(5px) rotate(45deg);
@@ -118,30 +138,35 @@ h1, h2 {
   transform: translateY(-5px) rotate(-45deg);
 }
 
-
-/* ---SHOW MENU--- */
+/* ----------SHOW MOBILE MENU---------- */
 
 .nav__checkbox:checked ~ .nav__menu-container {
   transform: translateX(0%);
 }
 
-
-/* ---HERO SECTION--- */
+/* ----------HERO SECTION---------- */
 
 .hero {
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .hero__title {
-  margin: 2.9rem 0 0 1.6rem;
+  margin: 7.3rem 0 0 1.6rem;
   white-space: pre-line;
 }
 
-.hero__text {
+.hero__text--mobile,
+.hero__text--desktop {
   font-family: var(--plex-mono);
   font-size: 1.4rem;
   line-height: 2.2rem;
   margin: 1.6rem 1.6rem 0 1.6rem;
+}
+
+.hero__text--desktop {
+  display: none;
 }
 
 .hero__btn {
@@ -154,16 +179,16 @@ h1, h2 {
   line-height: 2.2rem;
   border: none;
   background-color: var(--btn-color);
+  cursor: pointer;
 }
 
 .hero__btn:hover {
   background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
   color: var(--white);
-  transition: all 0.5s ease-in-out;
+  transition: all 0.2s ease;
 }
 
-
-/* ---PODCASTS SECTION--- */
+/* ----------PODCASTS SECTION---------- */
 
 .podcasts {
   width: 100%;
@@ -187,12 +212,11 @@ h1, h2 {
 }
 
 .podcasts__episode {
-  max-width: 29.8rem;
+  width: 29.8rem;
   height: 15.5rem;
 }
 
-
-/* ---US SECTION--- */
+/* ----------US SECTION---------- */
 
 .us {
   width: 100%;
@@ -222,8 +246,7 @@ h1, h2 {
   margin: 0 1.6rem;
 }
 
-
-/* ---GUESTS SECTION--- */
+/* ----------GUESTS SECTION---------- */
 
 .guests {
   width: 100%;
@@ -245,8 +268,7 @@ h1, h2 {
   max-width: 48rem;
 }
 
-
-/* ---TOPICS SECTION--- */
+/* ----------TOPICS SECTION---------- */
 
 .topics {
   width: 100%;
@@ -290,8 +312,7 @@ h1, h2 {
   text-align: center;
 }
 
-
-/* ---NEWS SECTION--- */
+/* ----------NEWS SECTION---------- */
 
 .news {
   width: 100%;
@@ -318,16 +339,16 @@ h1, h2 {
   line-height: 2.2rem;
   border: none;
   background-color: var(--btn-color);
+  cursor: pointer;
 }
 
 .news__btn:hover {
   background-image: linear-gradient(225deg, #0000FE 0%, #00F0B8 100%);
   color: var(--white);
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
 }
 
-
-/* ---FOOTER SECTION--- */
+/* ----------FOOTER SECTION---------- */
 
 .footer {
   width: 100%;
@@ -349,4 +370,8 @@ h1, h2 {
   margin-bottom: 3rem;
   display: flex;
   justify-content: space-between;
+}
+
+.footer__icons-container > a {
+  color: var(--black);
 }

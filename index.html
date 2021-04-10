@@ -4,18 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Podcast Channel - El lugar en donde entrarás un sin fin de podcasts con invitados y temas de gran interés general.">
+    <meta name="theme-color" content="#0000FF">
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./styles/styles.css" />
-    <link
-      rel="stylesheet"
-      href="./styles/desktop.css"
-      media="screen and (min-device-width: 1440px)"
-    />
+    <link rel="stylesheet" href="./styles/tablet.css" media="screen and (min-device-width: 770px)" />
+    <link rel="stylesheet" href="./styles/desktop.css" media="screen and (min-device-width: 1200px)" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,700;1,600&display=swap"
       rel="stylesheet"
     />
-    <title>Podcast Channel</title>
+    <title>Podcast Channel | Made by Alejo.dev</title>
     <script
       src="https://kit.fontawesome.com/a57dd90506.js"
       crossorigin="anonymous"
@@ -23,10 +23,12 @@
   </head>
 
   <body>
-
+    <!-- ---HEADER SECTION--- -->
     <header class="header">
       <nav class="nav">
-        <img class="nav__logo" src="./images/logo.svg" alt="logo principal del Podcast Channel" />
+        <a href="#home">
+          <img class="nav__logo" src="./images/logo.svg" alt="Logo principal del Podcast Channel" />
+        </a>
         <input id="checkbox" type="checkbox" class="nav__checkbox" />
         <label for="checkbox" class="nav__menu-icon"" >
           <div class="nav__menu-icon--line top"></div>
@@ -34,22 +36,23 @@
           <div class="nav__menu-icon--line bot"></div>
         </label>
         <ul class="nav__menu-container">
-          <li class="nav__menu-item"><a href="#">EPISODIOS</a></li>
-          <li class="nav__menu-item"><a href="#">NOSOTROS</a></li>
-          <li class="nav__menu-item"><a href="#">ENTREVISTAS</a></li>
-          <li class="nav__menu-item"><a href="#">TÓPICOS</a></li>
+          <li class="nav__menu-item"><a href="#podcasts">EPISODIOS</a></li>
+          <li class="nav__menu-item"><a href="#us">NOSOTROS</a></li>
+          <li class="nav__menu-item"><a href="#guests">ENTREVISTAS</a></li>
+          <li class="nav__menu-item"><a href="#topics">TÓPICOS</a></li>
         </ul>
       </nav>
     </header>
-
-    <section class="hero">
+    <!-- ---HERO SECTION--- -->
+    <section class="hero" id="home">
       <h1 class="hero__title">Hello <del>world</del>   
-        pale blue dot.</h1>
-      <p class="hero__text">Un podcast que explora el mundo de la programación. Nuevos episodios, todos los jueves cada 15 días.</p>
-      <button class="hero__btn">CONOCÉ MÁS</button>
+        pale blue dot<span class="hero__title--dot">.</span></h1>
+      <p class="hero__text--mobile">Un podcast que explora el mundo de la programación. Nuevos episodios, todos los jueves cada 15 días.</p>
+      <p class="hero__text--desktop">El portal de podcasts que explora el mundo de la programación y la tecnología. Nuevos episodios, todos los jueves cada 15 días.</p>
+      <button class="hero__btn role="link" onclick="window.location='#us'">CONOCÉ MÁS</button>
     </section>
-    
-    <section class="podcasts">
+    <!-- ---PODCASTS SECTION--- -->
+    <section class="podcasts" id="podcasts">
       <h2 class="podcasts__title">Episodios</h2>   
       <div class="podcasts__container">
         <iframe class="podcasts__episode" src="https://open.spotify.com/embed-podcast/show/27Z92SlTT4YOgFCng14hfq" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
@@ -58,9 +61,9 @@
         <iframe class="podcasts__episode" src="https://open.spotify.com/embed-podcast/show/1aYPBvV7AIilRkyORTD1X3" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
       </div>
     </section>
-
+    <!-- ---US SECTION--- -->
     <section class="us">
-      <img class="us__img" src="./images/phone.png" alt="">
+      <img class="us__img" id="us" src="./images/phone.png" alt="teléfono celular con texto e imagen de ejemplo">
       <div class="us__text-container">
         <h2 class="us__title"> De dónde 
           venimos
@@ -69,56 +72,55 @@
         <p class="us__text">Our planet is a lonely speck in the great enveloping cosmic dark. In our obscurity, in all this vastness, there is no hint that help will come from elsewhere to save us from ourselves.</p>
       </div>    
     </section>
-    
-    <section class="guests">
+    <!-- ---GUESTS SECTION--- -->
+    <section class="guests" id="guests">
       <h2 class="guests__title">Invitadas/os estelares</h2>
       <figure class="guests__container">
-        <img class="guests__img" src="./images/Katie-Bouman.png" alt="">
-        <img class="guests__img" src="./images/grace-hopper.png" alt="">
-        <img class="guests__img" src="./images/Margaret_Hamilton.png" alt="">
-        <img class="guests__img" src="./images/An-E.R.A.Univac-1103-computer-in-the-1950s.png" alt="">
-        <img class="guests__img" src="./images/first-programmable-general-purpose-computer.png" alt="">
-        <img class="guests__img" src="./images/susan-kare.png" alt="">
+        <img class="guests__img" src="./images/grace-hopper.png" alt="Imagen de Grace Hopper">
+        <img class="guests__img" src="./images/Katie-Bouman.png" alt="Imagen de Katie Bouman">
+        <img class="guests__img" src="./images/Margaret_Hamilton.png" alt="Imagen de Margaret Hamilton">
+        <img class="guests__img" src="./images/An-E.R.A.Univac-1103-computer-in-the-1950s.png" alt="Imagen de computador E.R.A. Univac en los años 1950">
+        <img class="guests__img" src="./images/first-programmable-general-purpose-computer.png" alt="Primer computador programable de propósito general">
+        <img class="guests__img" src="./images/susan-kare.png" alt="Imagen de Susan Kare">
       </figure>
     </section>
-         
-    <section class="topics">
+    <!-- ---TOPICS SECTION--- -->
+    <section class="topics" id="topics">
       <h2 class="topics__title">Algunos de nuestros temas</h2>
       <div class="topics__container">
         <figure class="topics__container--item">
-          <img class="topics__container--icon" src="./images/icon1.svg" alt="">
+          <img class="topics__container--icon" src="./images/icon1.svg" alt="Ícono de trabajo remoto">
           <h3 class="topics__container--text" >Trabajo remoto</h3>
         </figure>
         <figure class="topics__container--item">
-          <img class="topics__container--icon" src="./images/icon2.svg" alt="">
+          <img class="topics__container--icon" src="./images/icon2.svg" alt="Ícono de cabeza de una persona">
           <h3 class="topics__container--text" >Repensando la programación</h3>
         </figure>
         <figure class="topics__container--item">
-          <img class="topics__container--icon" src="./images/icon3.svg" alt="">
+          <img class="topics__container--icon" src="./images/icon3.svg" alt="Ícono de computadora portatil">
           <h3 class="topics__container--text" >Bases del código</h3>
         </figure>
         <figure class="topics__container--item">
-          <img class="topics__container--icon" src="./images/icon4.svg" alt="">
+          <img class="topics__container--icon" src="./images/icon4.svg" alt="Ícono de seguridad informática">
           <h3 class="topics__container--text" >Seguridad informática</h3>
         </figure>
       </div>
     </section>
-    
+    <!-- ---NEWS SECTION--- -->
     <section class="news">
       <h2 class="news__title">¿Querés las últimas novedades?</h2>
-      <button class="news__btn">ESCUCHÁ LOS EPISODIOS</button>
+      <button class="news__btn" role="link" onclick="window.location='#podcasts'">ESCUCHÁ LOS EPISODIOS</button>
     </section>
-    
+    <!-- ---FOOTER SECTION--- -->
     <footer class="footer">
       <p class="footer__text">&#169; 2019— Hello blue pale dot</p>
       <figure class="footer__icons-container">
-        <i class="fab fa-spotify"></i>
-        <i class="fab fa-instagram"></i>
-        <i class="fab fa-twitter"></i>
-        <i class="fab fa-facebook"></i>
-        <i class="fab fa-telegram"></i>
+        <a href="https://www.spotify.com/us/home/" target="_blank"><i class="fab fa-spotify"></i></a>
+        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://telegram.org/" target="_blank"><i class="fab fa-telegram"></i></a>
       </figure>
     </footer>
-    
   </body>
-</html>
+  </html>
